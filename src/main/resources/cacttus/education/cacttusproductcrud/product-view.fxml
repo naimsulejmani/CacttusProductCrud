@@ -6,9 +6,38 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="cacttus.education.cacttusproductcrud.controllers.ProductController"
-            prefHeight="400.0" prefWidth="600.0">
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="cacttus.education.cacttusproductcrud.controllers.ProductController"
+          prefHeight="400.0" prefWidth="600.0"
+          alignment="CENTER" vgap="10" hgap="10"
+>
+    <Label text="Product ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <TextField fx:id="txtProductId" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+    <Button fx:id="btnSearch" text="Search" GridPane.rowIndex="0" GridPane.columnIndex="2"
+            onAction="#search"/>
 
-</AnchorPane>
+    <Label text="Product Name:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <TextField fx:id="txtProductName" GridPane.rowIndex="1" GridPane.columnIndex="1"
+               GridPane.columnSpan="2"/>
+
+    <Label text="Supplier ID:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <TextField fx:id="txtSupplierId" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+    <Label text="Category ID:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+    <TextField fx:id="txtCategoryId" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+    <Label text="Unit Price:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+    <TextField fx:id="txtUnitPrice" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+    <Label text="Discontinued:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+    <CheckBox fx:id="chbDiscontinued" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+    <Button fx:id="btnSave" text="Save" GridPane.rowIndex="6" GridPane.columnIndex="0"
+            onAction="#save"
+    />
+    <Button fx:id="btnReset" text="Reset" GridPane.rowIndex="6" GridPane.columnIndex="1"
+            onAction="#resetForm"/>
+    <Button fx:id="btnDelete" text="Delete" GridPane.rowIndex="6" GridPane.columnIndex="2"/>
+
+</GridPane>
